@@ -1,1 +1,30 @@
-{"name":"Gérer mon site — Fanny Peinture","short_name":"Gérer mon site","lang":"fr","start_url":"./","scope":"./","display":"standalone","background_color":"#f6f4ef","theme_color":"#006b70","icons":[{"src":"../assets/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
+{
+  "name": "Gérer mon site — Fanny Peinture",
+  "short_name": "Gérer mon site",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f4ef",
+  "theme_color": "#006b70",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

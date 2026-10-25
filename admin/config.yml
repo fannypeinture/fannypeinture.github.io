@@ -4,7 +4,7 @@ backend:
   branch: main
 site_url: https://fannypeinture.montironi.fr
 display_url: https://fannypeinture.montironi.fr
-logo_url: /assets/favicon.svg
+logo_url: /assets/icons/icon-512.png
 locale: fr
 media_folder: /assets/photos
 public_folder: /assets/photos
