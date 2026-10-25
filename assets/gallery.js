@@ -101,9 +101,9 @@ if (window.Swiper && !hero.parentElement.hidden) {
     document.querySelector('.slider-progress span').style.width = `${n / count * 100}%`;
   }
   swiper = new window.Swiper(hero, {
-    effect: 'fade', fadeEffect: { crossFade: true }, speed: reduceMotion.matches ? 0 : 1100,
+    effect: 'fade', fadeEffect: { crossFade: true }, speed: reduceMotion.matches ? 0 : 700,
     loop: count > 1, allowTouchMove: true,
-    autoplay: reduceMotion.matches ? false : { delay: 6500, disableOnInteraction: false, pauseOnMouseEnter: true },
+    autoplay: reduceMotion.matches ? false : { delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true },
     a11y: { enabled: true, prevSlideMessage: 'Photo précédente', nextSlideMessage: 'Photo suivante', slideLabelMessage: 'Photo {{index}} sur {{slidesLength}}' },
     navigation: { prevEl: '#slide-prev', nextEl: '#slide-next' }, on: { init: update, slideChange: update }
   });
