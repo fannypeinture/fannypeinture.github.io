@@ -20,11 +20,13 @@ def photo_attrs(p):
     return f'data-pswp-width="{p["width"]}" data-pswp-height="{p["height"]}"'
 
 def header(active=''):
+    items=[('home','index.html','Accueil'),('contact','contact.html','Contact'),('confidentialite','confidentialite.html','Confidentialité'),('mentions-legales','mentions-legales.html','Mentions légales')]
+    nav_links=''.join(f'<a href="{url}"'+(' aria-current="page"' if active==key else '')+f'>{label}</a>' for key,url,label in items)
     return f'''<a class="skip-link" href="#contenu">Aller au contenu</a>
 <header class="site-header"><div class="header-inner">
 <a class="wordmark" href="index.html" aria-label="Fanny Peinture, accueil">Fanny Peinture<span>PEINTURE & DÉCORATION</span></a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span>Menu</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
-<nav id="main-nav" aria-label="Navigation principale"><a href="index.html#approche">L’esprit</a><a href="index.html#prestations">Prestations</a><a href="index.html#realisations">En images</a><a class="nav-contact {'current' if active=='contact' else ''}" href="contact.html">Parlons de votre projet <span aria-hidden="true">↗</span></a></nav>
+<nav id="main-nav" aria-label="Navigation principale">{nav_links}</nav>
 </div></header>'''
 
 def footer():
@@ -36,7 +38,7 @@ def page(file,title,description,body,active='',noindex=False):
     gallerycss='<link rel="stylesheet" href="assets/vendor/swiper.min.css"><link rel="stylesheet" href="assets/vendor/photoswipe.css">' if file=='index.html' else ''
     galleryjs='<script defer src="assets/vendor/swiper.min.js"></script><script type="module" src="assets/gallery.js"></script>' if file=='index.html' else ''
     preload='<link rel="preload" href="assets/photos/03-interieur-clair.webp" as="image">' if file=='index.html' else ''
-    document=f'''<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#006b70"><meta name="description" content="{html.escape(description,quote=True)}">{robots}<title>{html.escape(title)}</title><link rel="canonical" href="{canonical}"><meta property="og:type" content="website"><meta property="og:locale" content="fr_FR"><meta property="og:site_name" content="Fanny Peinture"><meta property="og:title" content="{html.escape(title,quote=True)}"><meta property="og:description" content="{html.escape(description,quote=True)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE}assets/photos/01-murs-et-moulures.webp"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/vendor/fonts.css">{gallerycss}<link rel="stylesheet" href="assets/style.css">{preload}<script defer src="assets/main.js"></script>{galleryjs}</head><body>{header(active)}<main id="contenu">{body}</main>{footer()}</body></html>'''
+    document=f'''<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#006b70"><meta name="description" content="{html.escape(description,quote=True)}">{robots}<title>{html.escape(title)}</title><link rel="canonical" href="{canonical}"><meta property="og:type" content="website"><meta property="og:locale" content="fr_FR"><meta property="og:site_name" content="Fanny Peinture"><meta property="og:title" content="{html.escape(title,quote=True)}"><meta property="og:description" content="{html.escape(description,quote=True)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE}assets/photos/01-murs-et-moulures.webp"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/vendor/fonts.css">{gallerycss}<link rel="stylesheet" href="assets/style.css?v=2">{preload}<script defer src="assets/main.js"></script>{galleryjs}</head><body>{header(active or ('home' if file=='index.html' else file.removesuffix('.html')))}<main id="contenu">{body}</main>{footer()}</body></html>'''
     write(file,document)
 
 slides=''
