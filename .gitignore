@@ -1,0 +1,4 @@
+.openai/
+dist/
+*.log
+node_modules/

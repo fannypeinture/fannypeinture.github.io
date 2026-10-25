@@ -1,0 +1,91 @@
+{
+  "projects": [
+    {
+      "title": "La lumière et les lignes",
+      "description": "Un intérieur clair où les murs et les moulures dessinent les volumes.",
+      "categories": [
+        "Peinture",
+        "Moulures"
+      ],
+      "published": true,
+      "featured": true,
+      "illustration": true,
+      "cover": "/assets/photos/03-interieur-clair.webp",
+      "photos": [
+        {
+          "image": "/assets/photos/03-interieur-clair.webp",
+          "alt": "Intérieur lumineux, murs blancs avec moulures et parquet.",
+          "width": 1200,
+          "height": 1798
+        }
+      ],
+      "credit": "Ksenia Chernaya / Pexels",
+      "source": "https://www.pexels.com/photo/photo-of-a-room-with-white-walls-11112251/"
+    },
+    {
+      "title": "Le relief des détails",
+      "description": "Moulures, encadrements et nuances de blanc : le détail prend sa place.",
+      "categories": [
+        "Moulures",
+        "Décoration"
+      ],
+      "published": true,
+      "featured": true,
+      "illustration": true,
+      "cover": "/assets/photos/01-murs-et-moulures.webp",
+      "photos": [
+        {
+          "image": "/assets/photos/01-murs-et-moulures.webp",
+          "alt": "Moulures blanches décoratives autour de deux ouvertures.",
+          "width": 1800,
+          "height": 1200
+        }
+      ],
+      "credit": "Monstera Production / Pexels",
+      "source": "https://www.pexels.com/photo/blank-frame-hanging-between-decorated-doorways-6373687/"
+    },
+    {
+      "title": "Jusqu’au plafond",
+      "description": "Corniches et raccords soulignent la rencontre des murs et du plafond.",
+      "categories": [
+        "Moulures",
+        "Plafonds"
+      ],
+      "published": true,
+      "featured": true,
+      "illustration": true,
+      "cover": "/assets/photos/02-plafond-moulure.webp",
+      "photos": [
+        {
+          "image": "/assets/photos/02-plafond-moulure.webp",
+          "alt": "Détail d’une corniche blanche à la jonction d’un mur et d’un plafond.",
+          "width": 1200,
+          "height": 1600
+        }
+      ],
+      "credit": "Dmitry Alexandrovich / Pexels",
+      "source": "https://www.pexels.com/photo/white-ceiling-with-moldings-12269245/"
+    },
+    {
+      "title": "Une nouvelle matière",
+      "description": "La peinture transforme la perception d’une surface et de sa texture.",
+      "categories": [
+        "Peinture"
+      ],
+      "published": true,
+      "featured": false,
+      "illustration": true,
+      "cover": "/assets/photos/04-peinture-rouleau.webp",
+      "photos": [
+        {
+          "image": "/assets/photos/04-peinture-rouleau.webp",
+          "alt": "Rouleau de peinture blanc devant une surface murale sombre.",
+          "width": 1200,
+          "height": 1797
+        }
+      ],
+      "credit": "Ksenia Chernaya / Pexels",
+      "source": "https://www.pexels.com/photo/painting-roller-on-wall-at-home-5691611/"
+    }
+  ]
+}

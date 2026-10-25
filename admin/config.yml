@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: fannypeinture/fannypeinture.github.io
+  branch: main
+site_url: https://fannypeinture.montironi.fr
+display_url: https://fannypeinture.montironi.fr
+logo_url: /assets/favicon.svg
+locale: fr
+media_folder: /assets/photos
+public_folder: /assets/photos
+media_libraries:
+  default:
+    config:
+      slugify_filename: true
+      transformations:
+        raster_image:
+          format: webp
+          quality: 87
+          width: 2400
+          height: 2400
+collections:
+  - name: galerie
+    label: Réalisations et photos
+    files:
+      - name: galerie
+        label: Mes réalisations
+        file: content/gallery.json
+        fields:
+          - name: projects
+            label: Chantiers
+            label_singular: Chantier
+            widget: list
+            summary: '{{fields.title}}'
+            collapsed: true
+            fields:
+              - {name: title, label: Nom du chantier, widget: string}
+              - {name: description, label: Description courte, widget: text, required: false}
+              - name: categories
+                label: Prestations et catégories
+                widget: select
+                multiple: true
+                options: [Peinture, Moulures, Plafonds, Décoration, Enduits, Papier peint, Fibre]
+              - {name: published, label: Publier sur le site, widget: boolean, default: false}
+              - {name: featured, label: Afficher dans le diaporama d’accueil, widget: boolean, default: false}
+              - {name: illustration, label: Photo d’illustration (pas un chantier personnel), widget: boolean, default: false}
+              - {name: cover, label: Photo de couverture, widget: image}
+              - name: photos
+                label: Photos dans l’ordre d’affichage
+                label_singular: Photo
+                widget: list
+                summary: '{{fields.alt}}'
+                min: 1
+                fields:
+                  - {name: image, label: Photo, widget: image}
+                  - {name: alt, label: Description de la photo, widget: string, hint: Une courte description pour l’accessibilité.}
+                  - {name: width, label: Largeur (facultatif), widget: number, required: false, value_type: int, min: 1}
+                  - {name: height, label: Hauteur (facultatif), widget: number, required: false, value_type: int, min: 1}
+              - {name: credit, label: Crédit photo (facultatif), widget: string, required: false}
+              - {name: source, label: Source (facultatif), widget: string, required: false}
