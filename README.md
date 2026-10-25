@@ -46,3 +46,7 @@ Créer un widget Turnstile géré pour le domaine. Ajouter ensuite uniquement le
 `scripts/generate.py` a servi à générer la première version des pages ; il contient le contenu initial. Ne pas le relancer après des changements de galerie ou de pages sans reporter les modifications. Le fonctionnement normal est statique et ne dépend pas de Python.
 
 Licence des bibliothèques et des polices : `assets/vendor/*LICENSE.txt`.
+
+## Icônes du site
+
+La favicon déclarée dans les pages est un PNG de 64 × 64 px : les petites favicons peuvent être centrées dans un carré blanc lors de la création de raccourcis Windows par Firefox. Le fichier `favicon.ico` reste disponible en repli. Les icônes Android/iPhone et leurs marges sont définies séparément dans les manifestes et le lien `apple-touch-icon` ; ne pas les modifier pour corriger les raccourcis Windows.
